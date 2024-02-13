@@ -6,7 +6,7 @@
   <title>Calculatrice de Noé</title>
   <style>
     body {
-      font-family: 'Arial', sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f4f4f4;
       display: flex;
       align-items: center;
@@ -16,41 +16,50 @@
     }
 
     #calculator {
-      background-color: #333;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      background-color: #f0f0f0;
       border-radius: 8px;
       padding: 20px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     #result {
+      grid-column: span 4;
       font-size: 24px;
-      color: #fff;
+      color: #000;
       text-align: right;
       margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
     }
 
     button {
-      width: 40px;
+      grid-column: span 1;
       height: 40px;
       font-size: 18px;
       margin: 5px;
       cursor: pointer;
-      background-color: #555;
-      color: #fff;
-      border: none;
+      background-color: #e0e0e0;
+      color: #000;
+      border: 1px solid #ccc;
       border-radius: 4px;
     }
 
     button.operator {
       background-color: #f76c6c;
+      color: #fff;
     }
 
     button.equal {
       background-color: #5cb85c;
+      color: #fff;
     }
 
     button:hover {
-      background-color: #777;
+      background-color: #ccc;
     }
   </style>
 </head>
